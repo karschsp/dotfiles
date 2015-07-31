@@ -1,6 +1,20 @@
+" Following lines added by drush vimrc-install on Fri, 31 Jul 2015 11:45:06 +0000.
+set nocompatible
+call pathogen#infect('/Users/skarsch1/.drush/vimrc/bundle/{}')
+call pathogen#infect('/Users/skarsch1/.vim/bundle/{}')
+" End of vimrc-install additions.
 syntax on
 
 " Wrap gitcommit file types at the appropriate length
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+# Open NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+
+# Open NERDTree if no files were spcified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
