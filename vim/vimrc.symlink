@@ -1,6 +1,6 @@
 " Following lines added by drush vimrc-install on Fri, 31 Jul 2015 11:45:06 +0000.
 filetype off
-set modelines=0
+" set modelines=0
 set nocompatible
 call pathogen#infect('/Users/skarsch1/.drush/vimrc/bundle/{}')
 call pathogen#infect('/Users/skarsch1/.vim/bundle/{}')
@@ -34,7 +34,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-set cursorline
+" set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -93,6 +93,16 @@ nnoremap <C-l> <C-w>l
 
 nmap @ :NERDTree<Return>
 
-set guifont=Source\ Code\ Pro:h14
+set guifont=Hack\ Regular:h14
 
 colorscheme badwolf
+
+
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
+let g:dash_map = {
+  \ 'module' : ['drupal', 'php'],
+  \ 'inc' : ['drupal', 'php'],
+  \ 'install' : ['drupal', 'php'],
+  \ 'profile' : ['drupal', 'php']
+  \ }
