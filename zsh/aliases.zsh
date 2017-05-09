@@ -1,5 +1,6 @@
 alias mvim='/Applications/MacVim.app/Contents/MacOS/MacVim'
 alias reload!='. ~/.zshrc'
+alias vim='/usr/local/Cellar/vim/8.0.0596/bin/vim'
 alias nano='vim'
 alias fix_drupal_perms='find . -type d -name files -exec chmod 777 {} \;'
 alias updatedb='/usr/libexec/locate.updatedb'
